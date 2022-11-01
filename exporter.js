@@ -5,8 +5,6 @@ const logger = require('pino')();
 
 //logger.level = 10;
 
-const io = require('pmx');
-
 const prefix = 'pm2';
 const labels = ['id', 'name', 'instance', 'version', 'interpreter', 'node_version', 'user', 'pm2_home'];
 const map = [
@@ -131,13 +129,12 @@ const exporter = () => {
     }
   });
 
-  return io.initModule({}, (err, conf) => {
-    const port = conf.port || process.env.PORT || 9209;
-    const host = conf.host || process.env.HOST || '0.0.0.0';
+  const port = process.env.PORT || 9209;
+  const host = process.env.HOST || '0.0.0.0';
 
-    server.listen(port, host);
-    logger.info('pm2-prometheus-exporter listening at %s:%s', host, port);
-  });
+  server.listen(port, host,
+    () => logger.info('pm2-prometheus-exporter listening at %s:%s', host, port)
+  );
 };
 
 exporter();
