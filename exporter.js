@@ -3,10 +3,12 @@ const prom = require('prom-client');
 const pm2 = require('pm2');
 const logger = require('pino')();
 
+//logger.level = 10;
+
 const io = require('pmx');
 
 const prefix = 'pm2';
-const labels = ['id', 'name', 'instance', 'version', 'interpreter', 'node_version'];
+const labels = ['id', 'name', 'instance', 'version', 'interpreter', 'node_version', 'user', 'pm2_home'];
 const map = [
   ['up', 'Is the process running'],
   ['cpu', 'Process cpu usage'],
@@ -46,7 +48,9 @@ const metrics = () => {
           version: p.pm2_env.version ? p.pm2_env.version : 'N/A',
           instance: p.pm2_env.NODE_APP_INSTANCE,
           interpreter: p.pm2_env.exec_interpreter,
-          node_version: p.pm2_env.node_version
+          node_version: p.pm2_env.node_version,
+          user: p.pm2_env.env.USER,
+          pm2_home: p.pm2_env.env.PM2_HOME,
         };
 
         const values = {
@@ -128,8 +132,8 @@ const exporter = () => {
   });
 
   return io.initModule({}, (err, conf) => {
-    const port = conf.port || 9209;
-    const host = conf.host || '0.0.0.0';
+    const port = conf.port || process.env.PORT || 9209;
+    const host = conf.host || process.env.HOST || '0.0.0.0';
 
     server.listen(port, host);
     logger.info('pm2-prometheus-exporter listening at %s:%s', host, port);
