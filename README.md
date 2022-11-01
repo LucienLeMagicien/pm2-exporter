@@ -1,49 +1,44 @@
-[![npm](https://img.shields.io/npm/v/pm2-metrics.svg)](https://npmjs.com/package/pm2-metrics) 
-[![NPM Downloads](https://img.shields.io/npm/dm/pm2-metrics.svg)](https://www.npmjs.com/package/pm2-metrics)
-[![NPM](https://nodei.co/npm/pm2-metrics.png?downloads=true)](https://nodei.co/npm/pm2-metrics/)
+## About
+This is a fork of [@saikatharryc's pm2-prometheus-exporter](https://github.com/saikatharryc/pm2-prometheus-exporter"), which is a fork of [@burningtree's](https://github.com/burningtree/pm2-prometheus-exporter). As such, [the original code](https://github.com/LucienLeMagicien/pm2-exporter/commits/master?after=319ca8c0fc838a6e50c9f14e1ab4f35cccbe7a10+34&branch=master&qualified_name=refs%2Fheads%2Fmaster) is under the ISC license. [My changes](https://github.com/LucienLeMagicien/pm2-exporter/commits?author=LucienLeMagicien) are under the Unlicense.
+I'm not making a PR because my needs are pretty specific (no pm2 module, `user` and `pm2_home` tags) and opinionated (yarn 2 with [Zero-Install](https://next.yarnpkg.com/features/zero-installs)).
+I didn't change much of the original code since it works fine.
 
-# PM2 Metrics
-
-#### Easy Install with PM2
-
-```shell
-pm2 install pm2-metrics
+## Usage
+### Running it directly
+```sh
+git clone https://github.com/LucienLeMagicien/pm2-exporter.git
+cd ./pm2-exporter
+PORT=9209 HOST=localhost yarn run start
 ```
 
-#### Or Clone and run as a seperate application
-
-```shell
-    $ git clone https://github.com/saikatharryc/pm2-prometheus-exporter.git
-    $ npm install
-    $ pm2 start exporter.js --name pm2-metrics
+### Running it under pm2
+```sh
+git clone https://github.com/LucienLeMagicien/pm2-exporter.git
+cd ./pm2-exporter
+PORT=9209 HOST=localhost pm2 start --name="pm2-exporter" --node-args='-r ./.pnp.cjs' ./exporter.js
 ```
 
-#### Open your browser
-
-```shell
-http://<HOST>:9209/metrics
+### Running it in Docker
+```sh
+docker run --volume=/home/user1/.pm2:/pm2_home --publish="127.0.0.1:9209:9209" lucienlemagicien/pm2-exporter
 ```
 
-#### For Prometheus Config
+### docker-compose.yml
+```
+  pm2-user1-exporter:
+    image: lucienlemagicien/pm2-exporter
+    restart: always
+    ports:
+      - '127.0.0.1:9209:9209'
+    volumes:
+      - /home/user1/.pm2:/pm2_home:rw
+```
 
-in `prometheus.yaml`
-inside `scrape_configs` add this block:
-
+### prometheus scrape job
 ```yml
-- job_name: pm2-metrics
-scrape_interval: 10s
-scrape_timeout: 10s
-metrics_path: /metrics
-scheme: http
-static_configs:
-  - targets:
-      - localhost:9209
+  - job_name: pm2-metrics
+    static_configs:
+      - targets:
+          - "localhost:9209" # or "pm2-user1-exporter:9209" if using the above docker-compose
 ```
 
-#### Grafana dashboard [#1 (comment)](https://github.com/saikatharryc/pm2-prometheus-exporter/issues/1#issuecomment-499551831)
-
-###### PR(s) & issue(s) are welcome
-
-###### \*change host name from `localhost` on basics where you are hosting
-
-###### Modified & Working Version from [pm2-prometheus-exporter by @burningtree](https://github.com/burningtree/pm2-prometheus-exporter)
