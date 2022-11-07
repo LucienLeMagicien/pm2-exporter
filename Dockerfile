@@ -2,7 +2,7 @@ FROM node:16
 
 WORKDIR /app
 
-COPY .yarn yarn.lock .pnp.*js ./
+COPY package.json yarn.lock .yarnrc.yml .yarn .pnp.*js ./
 COPY exporter.js .
 
 EXPOSE 9209
