@@ -2,7 +2,10 @@ FROM node:16
 
 WORKDIR /app
 
-COPY package.json yarn.lock .yarnrc.yml .yarn .pnp.*js ./
+# Directories need to be copied on their own, otherwise Docker will flatten it's content to ./
+COPY .yarn ./.yarn
+COPY package.json yarn.lock .yarnrc.yml .pnp.*js ./
+
 COPY exporter.js .
 
 EXPOSE 9209
