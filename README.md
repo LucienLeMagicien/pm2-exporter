@@ -20,13 +20,13 @@ PORT=9209 HOST=localhost pm2 start --name="pm2-exporter" --node-args='-r ./.pnp.
 
 ### Running it in Docker
 ```sh
-docker run --volume=/home/user1/.pm2:/pm2_home --publish="127.0.0.1:9209:9209" lucienlemagicien/pm2-exporter
+docker run --volume=/home/user1/.pm2:/pm2_home --publish="127.0.0.1:9209:9209" ghcr.io/lucienlemagicien/pm2-exporter:latest
 ```
 
 ### docker-compose.yml
 ```
   pm2-user1-exporter:
-    image: lucienlemagicien/pm2-exporter
+    image: ghcr.io/lucienlemagicien/pm2-exporter:latest
     restart: always
     ports:
       - '127.0.0.1:9209:9209'
