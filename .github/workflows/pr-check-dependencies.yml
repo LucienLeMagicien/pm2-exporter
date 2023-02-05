@@ -1,0 +1,21 @@
+# see https://next.yarnpkg.com/features/zero-installs#does-it-have-security-implications
+name: Check Dependency Cache
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-dependency-cache:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+
+    - name: Install dependencies
+      run: yarn install --check-cache
