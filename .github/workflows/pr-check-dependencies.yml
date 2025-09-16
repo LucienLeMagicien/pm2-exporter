@@ -9,6 +9,8 @@ on:
 jobs:
   check-dependency-cache:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
     - name: Checkout code
