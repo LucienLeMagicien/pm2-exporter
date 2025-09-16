@@ -9,6 +9,8 @@ on:
 
 jobs:
   dagger:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
