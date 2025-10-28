@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["pino", "npm:8.7.0"],\
+            ["pino", "npm:8.21.0"],\
             ["pm2", "npm:5.2.2"],\
             ["prom-client", "npm:14.1.0"]\
           ],\
@@ -1967,30 +1967,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["pino", [\
-        ["npm:8.7.0", {\
-          "packageLocation": "./.yarn/cache/pino-npm-8.7.0-4f4e3195e7-4aa2e320aa.zip/node_modules/pino/",\
+        ["npm:8.21.0", {\
+          "packageLocation": "./.yarn/cache/pino-npm-8.21.0-deea3c97b7-d895c37cfc.zip/node_modules/pino/",\
           "packageDependencies": [\
-            ["pino", "npm:8.7.0"],\
+            ["pino", "npm:8.21.0"],\
             ["atomic-sleep", "npm:1.0.0"],\
             ["fast-redact", "npm:3.1.2"],\
             ["on-exit-leak-free", "npm:2.1.0"],\
-            ["pino-abstract-transport", "npm:1.0.0"],\
+            ["pino-abstract-transport", "npm:1.2.0"],\
             ["pino-std-serializers", "npm:6.0.0"],\
-            ["process-warning", "npm:2.0.0"],\
+            ["process-warning", "npm:3.0.0"],\
             ["quick-format-unescaped", "npm:4.0.4"],\
             ["real-require", "npm:0.2.0"],\
             ["safe-stable-stringify", "npm:2.4.1"],\
-            ["sonic-boom", "npm:3.2.0"],\
-            ["thread-stream", "npm:2.2.0"]\
+            ["sonic-boom", "npm:3.8.1"],\
+            ["thread-stream", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["pino-abstract-transport", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/pino-abstract-transport-npm-1.0.0-a566611547-05dd0eda52.zip/node_modules/pino-abstract-transport/",\
+        ["npm:1.2.0", {\
+          "packageLocation": "./.yarn/cache/pino-abstract-transport-npm-1.2.0-8567d0d819-3336c51fb9.zip/node_modules/pino-abstract-transport/",\
           "packageDependencies": [\
-            ["pino-abstract-transport", "npm:1.0.0"],\
+            ["pino-abstract-transport", "npm:1.2.0"],\
             ["readable-stream", "npm:4.2.0"],\
             ["split2", "npm:4.1.0"]\
           ],\
@@ -2094,7 +2094,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["pm2-prometheus-exporter", "workspace:."],\
-            ["pino", "npm:8.7.0"],\
+            ["pino", "npm:8.21.0"],\
             ["pm2", "npm:5.2.2"],\
             ["prom-client", "npm:14.1.0"]\
           ],\
@@ -2134,10 +2134,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["process-warning", [\
-        ["npm:2.0.0", {\
-          "packageLocation": "./.yarn/cache/process-warning-npm-2.0.0-f7a9c0265e-a2bb299835.zip/node_modules/process-warning/",\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/process-warning-npm-3.0.0-e1380c08e2-1fc2eb4524.zip/node_modules/process-warning/",\
           "packageDependencies": [\
-            ["process-warning", "npm:2.0.0"]\
+            ["process-warning", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2504,10 +2504,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sonic-boom", [\
-        ["npm:3.2.0", {\
-          "packageLocation": "./.yarn/cache/sonic-boom-npm-3.2.0-5dbe3c3b0b-526669b78e.zip/node_modules/sonic-boom/",\
+        ["npm:3.8.1", {\
+          "packageLocation": "./.yarn/cache/sonic-boom-npm-3.8.1-1ea933ec95-79c90d7a2f.zip/node_modules/sonic-boom/",\
           "packageDependencies": [\
-            ["sonic-boom", "npm:3.2.0"],\
+            ["sonic-boom", "npm:3.8.1"],\
             ["atomic-sleep", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -2670,10 +2670,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["thread-stream", [\
-        ["npm:2.2.0", {\
-          "packageLocation": "./.yarn/cache/thread-stream-npm-2.2.0-b23a10baa0-b7f0ee166e.zip/node_modules/thread-stream/",\
+        ["npm:2.7.0", {\
+          "packageLocation": "./.yarn/cache/thread-stream-npm-2.7.0-b184293d78-75ab019cda.zip/node_modules/thread-stream/",\
           "packageDependencies": [\
-            ["thread-stream", "npm:2.2.0"],\
+            ["thread-stream", "npm:2.7.0"],\
             ["real-require", "npm:0.2.0"]\
           ],\
           "linkType": "HARD"\
