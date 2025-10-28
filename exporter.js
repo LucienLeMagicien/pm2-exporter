@@ -1,9 +1,6 @@
 const http = require('http');
 const prom = require('prom-client');
 const pm2 = require('pm2');
-const logger = require('pino')();
-
-//logger.level = 10;
 
 const prefix = 'pm2';
 const labels = ['id', 'name', 'instance', 'version', 'interpreter', 'node_version', 'user', 'pm2_home'];
@@ -39,7 +36,7 @@ const metrics = () => {
   return pm2c('list')
     .then(list => {
       for (const p of list) {
-        logger.debug(p, p.exec_interpreter, '>>>>>>');
+        //console.debug(p, p.exec_interpreter, '>>>>>>');
         const conf = {
           id: p.pm_id,
           name: p.name,
@@ -76,7 +73,7 @@ const metrics = () => {
             }
 
             if (Number.isNaN(value)) {
-              logger.warn('Ignoring metric name "%s" as value "%s" is not a number', name, value);
+              console.warn('Ignoring metric name "%s" as value "%s" is not a number', name, value);
               // eslint-disable-next-line no-continue
               continue;
             }
@@ -94,7 +91,7 @@ const metrics = () => {
 
             values[metricName] = value;
           } catch (error) {
-            logger.error(error);
+            console.error(error);
           }
         }
 
@@ -113,7 +110,7 @@ const metrics = () => {
       return registry.metrics();
     })
     .catch(err => {
-      logger.error(err);
+      console.error(err);
     });
 };
 
@@ -133,7 +130,7 @@ const exporter = () => {
   const host = process.env.HOST || '0.0.0.0';
 
   server.listen(port, host,
-    () => logger.info('pm2-prometheus-exporter listening at %s:%s', host, port)
+    () => console.info('pm2-prometheus-exporter listening at %s:%s', host, port)
   );
 };
 
