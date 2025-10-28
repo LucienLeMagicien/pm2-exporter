@@ -1,7 +1,7 @@
 {
   "name": "pm2-prometheus-exporter",
   "license": "ISC",
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.8.7",
   "dependencies": {
     "pino": "^8.7.0",
     "pm2": "^5.2.2",
