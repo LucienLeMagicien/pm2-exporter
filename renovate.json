@@ -3,5 +3,8 @@
   "extends": [
     "config:recommended"
   ],
-  "ignorePaths": ["**/node_modules/**", "**/cue.mod/**"]
+  "ignorePaths": ["**/node_modules/**", "**/cue.mod/**"],
+  "nuget": {
+    "enabled": false
+  }
 }
