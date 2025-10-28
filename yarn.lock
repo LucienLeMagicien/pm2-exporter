@@ -1792,11 +1792,11 @@ __metadata:
   linkType: hard
 
 "prom-client@npm:^14.1.0":
-  version: 14.1.0
-  resolution: "prom-client@npm:14.1.0"
+  version: 14.2.0
+  resolution: "prom-client@npm:14.2.0"
   dependencies:
     tdigest: ^0.1.1
-  checksum: 88f8e67020c0af07d09ab8f15caaa2a3d0810b01d903d0977d82947d3b0100a539db77bcccfde0bf2449a85060475f7fb05b64e7c34951c8a54b84240ae7ae81
+  checksum: d4c04e57616c72643dd02862d0d4bde09cf8869a19d0aef5e7b785e6e27d02439b66cdc165e3492f62d579fa91579183820870cc757a09b99399d2d02f46b9f1
   languageName: node
   linkType: hard
 
