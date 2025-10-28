@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Build and push to ghcr
-        uses: dagger/dagger-for-github@v3
+        uses: dagger/dagger-for-github@v7
         with:
           version: 0.2
           cmds: |
