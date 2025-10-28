@@ -30,7 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["pino", "npm:8.21.0"],\
             ["pm2", "npm:5.4.3"],\
-            ["prom-client", "npm:14.1.0"]\
+            ["prom-client", "npm:14.2.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2025,7 +2025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pm2-prometheus-exporter", "workspace:."],\
             ["pino", "npm:8.21.0"],\
             ["pm2", "npm:5.4.3"],\
-            ["prom-client", "npm:14.1.0"]\
+            ["prom-client", "npm:14.2.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2072,10 +2072,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prom-client", [\
-        ["npm:14.1.0", {\
-          "packageLocation": "./.yarn/cache/prom-client-npm-14.1.0-a4870792d6-88f8e67020.zip/node_modules/prom-client/",\
+        ["npm:14.2.0", {\
+          "packageLocation": "./.yarn/cache/prom-client-npm-14.2.0-67b29e14e5-d4c04e5761.zip/node_modules/prom-client/",\
           "packageDependencies": [\
-            ["prom-client", "npm:14.1.0"],\
+            ["prom-client", "npm:14.2.0"],\
             ["tdigest", "npm:0.1.2"]\
           ],\
           "linkType": "HARD"\
