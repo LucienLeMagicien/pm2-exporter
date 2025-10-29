@@ -30,7 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["pino", "npm:8.21.0"],\
             ["pm2", "npm:5.4.3"],\
-            ["prom-client", "npm:14.2.0"]\
+            ["prom-client", "npm:15.1.3"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -62,6 +62,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@npmcli/move-file", "npm:2.0.1"],\
             ["mkdirp", "npm:1.0.4"],\
             ["rimraf", "npm:3.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@opentelemetry/api", [\
+        ["npm:1.9.0", {\
+          "packageLocation": "./.yarn/cache/@opentelemetry-api-npm-1.9.0-7d0560d0dd-9e88e59d53.zip/node_modules/@opentelemetry/api/",\
+          "packageDependencies": [\
+            ["@opentelemetry/api", "npm:1.9.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2025,7 +2034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pm2-prometheus-exporter", "workspace:."],\
             ["pino", "npm:8.21.0"],\
             ["pm2", "npm:5.4.3"],\
-            ["prom-client", "npm:14.2.0"]\
+            ["prom-client", "npm:15.1.3"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2072,10 +2081,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prom-client", [\
-        ["npm:14.2.0", {\
-          "packageLocation": "./.yarn/cache/prom-client-npm-14.2.0-67b29e14e5-d4c04e5761.zip/node_modules/prom-client/",\
+        ["npm:15.1.3", {\
+          "packageLocation": "./.yarn/cache/prom-client-npm-15.1.3-2fca26d488-9a57f3c16f.zip/node_modules/prom-client/",\
           "packageDependencies": [\
-            ["prom-client", "npm:14.2.0"],\
+            ["prom-client", "npm:15.1.3"],\
+            ["@opentelemetry/api", "npm:1.9.0"],\
             ["tdigest", "npm:0.1.2"]\
           ],\
           "linkType": "HARD"\
