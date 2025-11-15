@@ -1426,10 +1426,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["js-yaml", [\
-        ["npm:4.1.0", {\
-          "packageLocation": "./.yarn/cache/js-yaml-npm-4.1.0-3606f32312-c7830dfd45.zip/node_modules/js-yaml/",\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/js-yaml-npm-4.1.1-86ec786790-ea2339c693.zip/node_modules/js-yaml/",\
           "packageDependencies": [\
-            ["js-yaml", "npm:4.1.0"],\
+            ["js-yaml", "npm:4.1.1"],\
             ["argparse", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
@@ -1956,7 +1956,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enquirer", "npm:2.3.6"],\
             ["eventemitter2", "npm:5.0.1"],\
             ["fclone", "npm:1.0.11"],\
-            ["js-yaml", "npm:4.1.0"],\
+            ["js-yaml", "npm:4.1.1"],\
             ["mkdirp", "npm:1.0.4"],\
             ["needle", "npm:2.4.0"],\
             ["pidusage", "npm:3.0.2"],\
