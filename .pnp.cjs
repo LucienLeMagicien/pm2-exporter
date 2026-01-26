@@ -165,19 +165,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["acorn", [\
-        ["npm:8.8.1", {\
-          "packageLocation": "./.yarn/cache/acorn-npm-8.8.1-20e4aea981-4079b67283.zip/node_modules/acorn/",\
+        ["npm:8.15.0", {\
+          "packageLocation": "./.yarn/cache/acorn-npm-8.15.0-0764cf600e-309c6b49ae.zip/node_modules/acorn/",\
           "packageDependencies": [\
-            ["acorn", "npm:8.8.1"]\
+            ["acorn", "npm:8.15.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["acorn-walk", [\
-        ["npm:8.2.0", {\
-          "packageLocation": "./.yarn/cache/acorn-walk-npm-8.2.0-2f2cac3177-1715e76c01.zip/node_modules/acorn-walk/",\
+        ["npm:8.3.4", {\
+          "packageLocation": "./.yarn/cache/acorn-walk-npm-8.3.4-a75fa85ead-4ff03f4232.zip/node_modules/acorn-walk/",\
           "packageDependencies": [\
-            ["acorn-walk", "npm:8.2.0"]\
+            ["acorn-walk", "npm:8.3.4"],\
+            ["acorn", "npm:8.15.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -710,7 +711,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ast-types", "npm:0.13.4"],\
             ["escodegen", "npm:1.14.3"],\
             ["esprima", "npm:4.0.1"],\
-            ["vm2", "npm:3.9.19"]\
+            ["vm2", "npm:3.10.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2720,12 +2721,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vm2", [\
-        ["npm:3.9.19", {\
-          "packageLocation": "./.yarn/cache/vm2-npm-3.9.19-c8bfadc28f-fc6cf55313.zip/node_modules/vm2/",\
+        ["npm:3.10.3", {\
+          "packageLocation": "./.yarn/cache/vm2-npm-3.10.3-675892c0ac-69540bc150.zip/node_modules/vm2/",\
           "packageDependencies": [\
-            ["vm2", "npm:3.9.19"],\
-            ["acorn", "npm:8.8.1"],\
-            ["acorn-walk", "npm:8.2.0"]\
+            ["vm2", "npm:3.10.3"],\
+            ["acorn", "npm:8.15.0"],\
+            ["acorn-walk", "npm:8.3.4"]\
           ],\
           "linkType": "HARD"\
         }]\
