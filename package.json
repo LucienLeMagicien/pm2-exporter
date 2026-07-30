@@ -3,7 +3,7 @@
   "license": "ISC",
   "packageManager": "yarn@3.2.4",
   "dependencies": {
-    "pino": "^8.7.0",
+    "pino": "^10.0.0",
     "pm2": "^5.2.2",
     "prom-client": "^14.1.0"
   },
